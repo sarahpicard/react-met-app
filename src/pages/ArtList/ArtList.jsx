@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react"
-import { getArtList } from "../../services/api-calls"
+import { getArtList, getOne } from "../../services/api-calls"
 import { Link } from "react-router-dom"
+import { random } from "animejs"
 
 const ArtList = () => {
-  const [artList, setArtList] = useState([])
+  const [oneArt, setOneArt] = useState({})
 
   useEffect(() => {
-    getArtList()
-    .then(artData => setArtList(artData.objectIDs))
-  })
+    getOne()
+    .then(art => setOneArt(art))
+  }, [])
+
+
   return (
     <div>
-      <h1>List of All Art at the MET!</h1>
-      {artList.map((artData) => (
-        <Link key={artData.index} state={{ artData}} to ='/art'>
-          <div key={artData.index}>
-            {artData.title}
-          </div>
-        </Link>
-      ))}
+      <h1>Random Art Piece!</h1>
+      <div>
+        <p>{oneArt.title}</p>
+        <button>
+          <a href={oneArt.objectURL}>See Art</a>
+        </button>
+      </div>
     </div>
   )
 }
