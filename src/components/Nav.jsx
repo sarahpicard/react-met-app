@@ -8,7 +8,7 @@ const Nav = () => {
           className="px-20 hover:text-red-200" 
           href="/art"
           >
-          <FaHandPointRight className='inline mr-3 mb-2'/>
+          <FaHandPointRight className='inline mr-3 mb-2 h-6' />
           Random Art
         </a>
         <a 
