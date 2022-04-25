@@ -11,8 +11,3 @@ export function getOne() {
   .then(res => res.json())
 }
 
-// export function getArtList() {
-//   return fetch(`${searchUrl}hasImages=true&q=hasImages=true`)
-//   .then(res => res.json())
-// }
-
