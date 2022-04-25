@@ -12,7 +12,7 @@ const ArtList = () => {
 
   return (
     <div className="w-screen">
-        <div className="container mx-auto w-1/3 flexbox my-16 bg-rose-50 px-6 py-6 rounded-lg shadow-lg">
+        <div className="container mx-auto lg:w-1/3 sm:w-1/2 w-3/4 flexbox my-16 bg-rose-50 px-6 py-6 rounded-lg shadow-lg">
           <a href={oneArt.objectURL} target="_blank" rel="noreferrer noopener">
           <h1 className="text-3xl font-medium mb-2">{oneArt.title}</h1>
             {oneArt.artistDisplayName === '' ?
