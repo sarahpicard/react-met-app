@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getOne } from "../../services/api-calls"
+
 const ArtList = () => {
   const [oneArt, setOneArt] = useState({})
 
@@ -11,7 +12,7 @@ const ArtList = () => {
 
   return (
     <div className="w-screen">
-        <div className="container mx-auto w-1/3 flexbox my-20 bg-rose-50 px-6 py-6 rounded-lg shadow-lg">
+        <div className="container mx-auto w-1/3 flexbox my-16 bg-rose-50 px-6 py-6 rounded-lg shadow-lg">
           <a href={oneArt.objectURL} target="_blank" rel="noreferrer noopener">
           <h1 className="text-3xl font-medium mb-2">{oneArt.title}</h1>
             {oneArt.artistDisplayName === '' ?
@@ -26,7 +27,7 @@ const ArtList = () => {
             }
             {oneArt.objectDate === '' ?
               <p>
-                <span className="font-medium">No art date available 😢 </span>
+                <span className="font-medium">No art date available 😪 </span>
               </p>
             :
               <p>
@@ -36,7 +37,7 @@ const ArtList = () => {
             }
             {oneArt.culture === '' ?
               <p>
-                <span className="font-medium">No art culture available 😢 </span>
+                <span className="font-medium">No art culture available 🤷🏼‍♀️ </span>
               </p>  
             :
               <p>
@@ -46,7 +47,7 @@ const ArtList = () => {
             }
             {oneArt.repository === '' ?
               <p>
-                <span className="font-medium">No art repository available 😢 </span>
+                <span className="font-medium">No art repository available 😿 </span>
               </p>  
             :
               <p>
@@ -56,7 +57,7 @@ const ArtList = () => {
             }
             {oneArt.primaryImage === '' ?
               <p>
-                <span className="font-medium">No image available 😢 </span>
+                <span className="font-medium">No image available 😳 </span>
               </p>
             :
               <img className="mx-auto mb-3 mt-7" src={oneArt.primaryImage} alt="art" style={{height: '320px', width: '300px'}}/>
