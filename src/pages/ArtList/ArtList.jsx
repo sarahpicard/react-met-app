@@ -13,8 +13,8 @@ const ArtList = () => {
 
 
   return (
-    <div>
-      <div>
+    <div className="w-screen">
+      <div className="container mx-auto w-1/3 flexbox my-20 bg-rose-50 px-6 py-6 rounded-lg shadow-lg">
         <h1>{oneArt.title}</h1>
         <p>Artist: {oneArt.artistDisplayName}</p>
         <p>Art Date: {oneArt.objectDate}</p>

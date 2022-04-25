@@ -6,13 +6,13 @@ import Artists from './pages/Artists/Artists';
 
 function App() {
   return (
-    <>
+    <div className='bg-teal-50 h-screen w-screen'>
       <Nav />
       <Routes>
         <Route path="/art" element={<ArtList />} />
         <Route path="/artists" element={<Artists />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
