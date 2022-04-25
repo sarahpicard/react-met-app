@@ -13,7 +13,7 @@ const ArtList = () => {
     <div className="w-screen">
       <a href={oneArt.objectURL} target="_blank" rel="noreferrer noopener">
         <div className="container mx-auto w-1/3 flexbox my-20 bg-rose-50 px-6 py-6 rounded-lg shadow-lg">
-          <h1 className="text-2xl font-medium mb-2">{oneArt.title}</h1>
+          <h1 className="text-3xl font-medium mb-2">{oneArt.title}</h1>
           <p>
             <span className="font-medium">Artist: </span> 
             {oneArt.artistDisplayName}
